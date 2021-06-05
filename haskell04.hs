@@ -25,4 +25,4 @@ genCircs :: Int -> (Int,Int) -> Int -> [(Int,Int,Int)]
 genCircs n (cx,cy) r = take n [(x,cy,r) | x <- (iterate (+2) cx)]
 
 genReds :: Int -> [(Int,Int,Int)]
-genReds i = take n [(x,0,0) | x <- [2,2 + truncate (fromIntegral i*1.33)..], x < 255]
+genReds i = take i [(x,0,0) | x <- [2,2 + truncate (fromIntegral i*1.33)..], x < 255]
